@@ -1,5 +1,19 @@
 {
+  "name": "alvaserver",
+  "version": "1.0.0",
+  "description": "This is a get starting with the Trefle API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "started",
+    "trefle"
+  ],
+  "author": "Alva Lundebrg",
+  "license": "MIT",
   "dependencies": {
+    "express": "^4.17.1",
     "node-fetch": "^2.6.1"
   }
 }
