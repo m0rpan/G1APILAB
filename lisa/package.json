@@ -1,0 +1,14 @@
+{
+  "name": "lisa",
+  "version": "1.0.0",
+  "description": "api assignment",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lisa Maliqi",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
