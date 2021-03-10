@@ -9,7 +9,7 @@ app.use(express.json( {limit: '1mb'}));
 
 //EX 1
 app.get('/api/redPlants', (request,response)=>{
-  fetch('https://trefle.io/api/v1/species?filter%5Bflower_color%5D=red&token=RLDwZa0xCVzkqz0Ho4s_8IkuIy0bMSdwTTYJh64fNCY')
+  fetch('https://trefle.io/api/v1/species?filter%5Bflower_color%5D=red&token=RLDwZa0xCVzkqz0Ho4s_8IkuIy0bMSdwTTYJh64fNCY&page=2')
   .then(res => res.json())
   .then(data => response.json(data));
 })
@@ -18,13 +18,13 @@ app.get('/api/redPlants', (request,response)=>{
 
 
 //EX 2
-app.get('/api/max10', (request,response)=>{
-  fetch('https://trefle.io/api/v1/distributions?range%5Bspecies_count%5D=%2C10&token=RLDwZa0xCVzkqz0Ho4s_8IkuIy0bMSdwTTYJh64fNCY')
+app.get('/api/coconutSpecies', (request,response)=>{
+  fetch('https://trefle.io/api/v1/species/search?q=coconut&token=RLDwZa0xCVzkqz0Ho4s_8IkuIy0bMSdwTTYJh64fNCY')
   .then(res => res.json())
   .then(data => response.json(data));
 })
 
-app.post('/api/max10', (request, response) => {
+app.post('/api/coconutSpecies', (request, response) => {
   console.log(request.body)
 })
 
