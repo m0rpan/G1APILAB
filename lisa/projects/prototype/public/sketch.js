@@ -2,8 +2,6 @@
 //0=xherophile, 10=subaquatic
 //depending on what number the user puts in, give a list of plants that can survive in that humidity
 
-
-
 //Create input box. 
 
 //create else if statement, from 0-10. last else statement gives an alert that says "this is not valid"
@@ -11,7 +9,7 @@
 
 var numberInput;
 
-
+//function that shows the list of data if the number that is put inside the input box is between 0 and 10
 function myFunction() {
     numberInput = document.getElementById("number").value;
     submitOK = "true";
@@ -22,19 +20,15 @@ function myFunction() {
         console.log("Wrong");
     }
 
-    if(document.getElementById("showData") == "block") {
-        document.getElementById("showData") == "none";
-    } else {
-        document.getElementById("showData") == "block";
-    }
-
+    //when data is shown and a new number is supposed to be put in the input box, remove the current list that is visible
     document.getElementById("number").addEventListener('keyup', function() {
         if (this.value === "") {
         document.getElementById("showData").innerHTML = "";
         }
         });
 }
-
+ 
+//function that makes the data from API show on page
 async function getDataHumidityValue(numberInput) {
   const res = await fetch('/api/humidityValue' + numberInput);
   const myDataHumidityValue = await res.json();
@@ -42,10 +36,11 @@ async function getDataHumidityValue(numberInput) {
   showList(myDataHumidityValue.data);
 }
 
+// create a function containing a loop that creates the list with the data from the api
 function showList(data){
   const dataDiv= document.getElementById("showData");
   const list = document.createElement("ul");
-
+//loop that creates the full list with the data from the first page from the api. Add only the names 
   for (var i = 0; i < data.length; i++) {
     const item = document.createElement("li");
     item.appendChild(document.createTextNode(data[i].common_name));
