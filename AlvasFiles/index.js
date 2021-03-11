@@ -1,5 +1,7 @@
 const fetch = require('node-fetch');
 const express = require('express');
+
+
 const app = express();
 app.listen(3000, ()=> console.log('listen at 3000'));
 app.use(express.static('public'));
@@ -31,9 +33,12 @@ app.post('/api/PlantID', (request, response) => {
 })
 
 // PROTOTYPE
-// Data about plants that does not have minimum_temperature= null
+// Data about plants that does not have minimum_temperature=null
 app.get('/api/FilterOutNull', (request,response)=>{
   fetch('https://trefle.io/api/v1/plants?token=tPkth5TH6pRDS6z3Ug7wb3JPeH-veqxTjiRiYnZwDeY&filter_not[minimum_temperature_deg_c]=null')
   .then(res => res.json())
   .then(data => response.json(data));
 })
+
+
+
