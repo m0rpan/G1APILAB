@@ -9,60 +9,46 @@
 //create else if statement, from 0-10. last else statement gives an alert that says "this is not valid"
 //each number-statement shows a list of plants that can live in that humidity. 
 
+var numberInput;
+
+
 function myFunction() {
-    var age = document.getElementById("age").value;
+    numberInput = document.getElementById("number").value;
     submitOK = "true";
-
-    if (age == "0") {
-        alert("0 it is!");
-    } else if (age == 1) {
-        getDataHumidityValue1();
-    } else if (age == 2) {
-        alert("2 it is!");
-    } else if (age == 3) {
-        alert("3 it is!");
-    } else if (age == 4) {
-        alert("4 it is!");
-    } else if (age == 5) {
-        alert("5 it is!");
-    } else if (age == 6) {
-        alert("6 it is!");
-    } else if (age == 7) {
-        alert("7 it is!");
-    } else if (age == 8) {
-        alert("8 it is!");
-    } else if (age == 9) {
-        alert("9 it is!");
-    } else if (age == 10) {
-        alert("10 it is!");
+    if(numberInput > -1 && numberInput < 11) {
+        console.log(numberInput + " it is!");
+        getDataHumidityValue(numberInput);
     } else {
-        alert("this is not valid");
+        console.log("Wrong");
     }
-    
-    
-    if (submitOK == "false") {
-      return false;
+
+    if(document.getElementById("showData") == "block") {
+        document.getElementById("showData") == "none";
+    } else {
+        document.getElementById("showData") == "block";
     }
-  }
 
-  
-
-
-async function getDataHumidityValue1(){
-  const res = await fetch('/api/humidityValue1');
-  const myDataHumidityValue1 = await res.json();
-  console.log(myDataHumidityValue1);
-
-  showList1(myDataHumidityValue1)
+    document.getElementById("number").addEventListener('keyup', function() {
+        if (this.value === "") {
+        document.getElementById("showData").innerHTML = "";
+        }
+        });
 }
 
-function showList1(data){
+async function getDataHumidityValue(numberInput) {
+  const res = await fetch('/api/humidityValue' + numberInput);
+  const myDataHumidityValue = await res.json();
+  
+  showList(myDataHumidityValue.data);
+}
+
+function showList(data){
   const dataDiv= document.getElementById("showData");
   const list = document.createElement("ul");
 
-  for (var i = 0; i < data.data.length; i++) {
+  for (var i = 0; i < data.length; i++) {
     const item = document.createElement("li");
-    item.appendChild(document.createTextNode(data.data[i].common_name));
+    item.appendChild(document.createTextNode(data[i].common_name));
     list.appendChild(item);
   }
   dataDiv.appendChild(list);
