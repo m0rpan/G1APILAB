@@ -1,4 +1,3 @@
-
 // EXAMPLE 1.
 getDataRedPlant();
 
@@ -35,7 +34,7 @@ function showList1(data){
     imgElement.src = data.data[i].image_url;
   }
   else{
-    imgElement.src= "does_not_exist.JPEG";
+    imgElement.src= "does_not_exist.JPG";
     imgElement.style.width = "400px";
   }
 
@@ -64,14 +63,14 @@ function getIndividualPlant(id){
 
 
 // EXAMPLE 2
-getDataMax10();
+getDataCoconutSpecies();
 
-async function getDataMax10(){
-  const res = await fetch('/api/max10');
-  const myDataMax10 = await res.json();
-  console.log(myDataMax10);
+async function getDataCoconutSpecies(){
+  const res = await fetch('/api/CoconutSpecies');
+  const myDataCoconutSpecies = await res.json();
+  console.log(myDataCoconutSpecies);
 
-  showList2(myDataMax10)
+  showList2(myDataCoconutSpecies)
 
 }
 
@@ -81,7 +80,7 @@ function showList2(data){
 
   for (var i = 0; i < data.data.length; i++) {
     const item = document.createElement("li");
-    item.appendChild(document.createTextNode(data.data[i].name));
+    item.appendChild(document.createTextNode(data.data[i].common_name));
     list.appendChild(item);
   }
   dataDiv.appendChild(list);
