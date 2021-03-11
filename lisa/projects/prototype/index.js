@@ -5,6 +5,8 @@ app.listen(3000, ()=> console.log('listen at 3000'));
 app.use(express.static('public'));
 app.use(express.json( {limit: '1mb'}));
 
+
+//PROTOTYPE
 //soil_humidity value for 0
 app.get('/api/humidityValue0', (request,response)=>{
     fetch('https://trefle.io/api/v1/species?token=RLDwZa0xCVzkqz0Ho4s_8IkuIy0bMSdwTTYJh64fNCY&filter[soil_humidity]=0')
