@@ -13,7 +13,7 @@
         <p> days to harvest: <span id ="harv"></span> </p>
 
         <script>
-                const harvest_url = 'https://trefle.io/api/v1/plants?token=YOUR_TREFLE_TOKEN&filter[common_name]=beach%20strawberry';     
+                const harvest_url = 'http://trefle.io/api/v1/corrections/species/{record_id}';     
             async function getData() {
                 const response = await fetch(harvest_url);
                 const data = await reponse.json();
