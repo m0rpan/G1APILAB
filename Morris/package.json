@@ -1,5 +1,5 @@
 {
-  "name": "alvaserver",
+  "name": "morpnet",
   "version": "1.0.0",
   "description": "This is a get starting with the Trefle API",
   "main": "index.js",
@@ -10,7 +10,7 @@
     "started",
     "trefle"
   ],
-  "author": "Alva Lundebrg",
+  "author": "Morris Ahlstrand",
   "license": "MIT",
   "dependencies": {
     "express": "^4.17.1",
