@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+        <title>Ino trying stuff:API </title>
+    </head>
+    <body>
+
+        <h1>The day's it takes for the plant to bare fruit</h1>
+        <div></div>
+        <p> days to harvest: <span id ="harv"></span> </p>
+
+        <script>
+                const harvest_url = 'https://trefle.io/api/v1/plants?token=YOUR_TREFLE_TOKEN&filter[common_name]=beach%20strawberry';     
+            async function getData() {
+                const response = await fetch(harvest_url);
+                const data = await reponse.json();
+                console.log(data) };   
+                    
+                
+                getData();   
+        </script>
+    </body>
+</html>
