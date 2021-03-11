@@ -21,5 +21,3 @@ function showList(data){
   }
   dataDiv.appendChild(list);
 }
-
-ß
