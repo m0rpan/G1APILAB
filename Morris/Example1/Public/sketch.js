@@ -22,7 +22,7 @@ function showList_WithImg(data){
     const imgElement = document.createElement("img");
     //setting width and hight to imgElement
     imgElement.style.width = "150px";
-    imgElement.style.height = "500px";
+    imgElement.style.height = "200px";
     
     //if common_name does not exist print scientific_name
     if(data.data[i].common_name){
