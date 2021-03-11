@@ -8,14 +8,14 @@
     </head>
     <body>
 
-        <h1>The day's it takes for the plant to bare fruit</h1>
+        <h1>the zone distribution of plant:</h1>
         <div></div>
-        <p> days to harvest: <span id ="harv"></span> </p>
+        <p> Zones <span id ="zone"></span> </p>
 
         <script>
-                const harvest_url = 'https://trefle.io/api/v1/distributions?token=Xz3zPU0yxTlTQgPCL65vqZQP98wTLL2ETe70d2MsmUE';     
+                const zone_url = 'https://trefle.io/api/v1/distributions?token=Xz3zPU0yxTlTQgPCL65vqZQP98wTLL2ETe70d2MsmUE';     
             async function getData() {
-                const response = await fetch(harvest_url);
+                const response = await fetch(zone_url);
                 const data = await reponse.json();
                 console.log(data) };   
                     
