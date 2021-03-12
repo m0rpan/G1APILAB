@@ -29,7 +29,9 @@
 </p>
 
 <button class="button button1" id="buttonOf">zone</button>
-<input type="image" id="zoneOf">
+<script LANGUAGE="JavaScript" id="zoneOf" type="text/javascript">function display() {
+  getData();
+  }</script>
 
 </body>
 
@@ -44,9 +46,10 @@ async function getData() {
         
     getData(); 
 //I am trying to get the data I am fetching from the zone url to display under the button
-    if (document.getElementById("buttonOf").onclick = true){
-        document.getElementById("zoneOf").style.display = console.log(data)};
-    document.getElementById("buttonOf").onclick= getData();
+document.getElementById("buttonOf").onclick= getData();  
+if (document.getElementById("buttonOf").onclick = true){
+        document.getElementById("zoneOf").style.display = display()};
+    
     
     //the button is meant to be on the devices plant information code
 </script>
