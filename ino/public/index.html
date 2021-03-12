@@ -28,7 +28,8 @@
 <p>To find which part of the plantet your plant comes from: click on zone button
 </p>
 
-<button class="button button1">zone</button>
+<button class="button button1" id="buttonOf">zone</button>
+<input type="image" id="zoneOf">
 
 </body>
 
@@ -42,6 +43,9 @@ async function getData() {
     console.log(data) };   
         
     getData(); 
+
+    document.getElementById("zoneOf").style.display = getData();
+    document.getElementById("buttonOf").onclick= getData();
     
     //the button is meant to be on the devices plant information code
 </script>
