@@ -8,11 +8,11 @@ async function getDataP_size(){
   showList(myData)
 
 }
-
+//show list of coconuts
 function showList(data){
   const dataDiv= document.getElementById("showData");
   const list = document.createElement("ul");
-
+  
   for (var i = 0; i < data.data.length; i++) {
     const item = document.createElement("li");
     item.appendChild(document.createTextNode(data.data[i].common_name));

@@ -5,19 +5,7 @@ app.listen(3000, ()=> console.log('listen at 3000'));
 app.use(express.static('public'));
 app.use(express.json( {limit: '1mb'}));
 
-//Example 1, get data about plants with hight between 5cm & 20cm
-app.get('/api/PlantsSize', (request,response)=>{
-  fetch('https://trefle.io/api/v1/species?range%5Bmaximum_height_cm%5D=5%2C20&token=Y9sXckxAGaC1yOfpfizascRog15R1porQvOO0Cf4fFM')
-  .then(res => res.json())
-  .then(data => response.json(data));
-})
 
-
-
-
-
-
-//Example 2 
 app.get('/api/RedFlowers', (request,response)=>{
   fetch('https://trefle.io/api/v1/species?filter%5Bflower_color%5D=red&token=Y9sXckxAGaC1yOfpfizascRog15R1porQvOO0Cf4fFM')
   .then(res => res.json())
@@ -27,8 +15,5 @@ app.get('/api/RedFlowers', (request,response)=>{
 
 app.post('/api/PlantID', (request, response) => {
   console.log(request.body)
- /* fetch('https://trefle.io/api/v1/species/'+request.id + '&token=Y9sXckxAGaC1yOfpfizascRog15R1porQvOO0Cf4fFM')
-  .then(res => res.json())
-  .then(data => response.json(data));*/
 })
 
