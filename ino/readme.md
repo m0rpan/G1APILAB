@@ -18,4 +18,4 @@ To open the prototypes you have to:
 
 ## Who maintains and contributes to the project
 This individual effort was by Ino, with  the guidence of my peers(Alva, Lisa, & Morris) and a lot of youtbue videos. this was intended for the great grop project which, "was created by Alva, Lisa, Morris and Inotila from group 1 in the Interaction Design program. 
-We have built our project with the help of Peter Tolstrup Aagesen, the YouTube channel _the coding train_ and the examples from Trefle.io. "
+We have built our project with the help of Peter Tolstrup Aagesen, the YouTube channel _the coding train_ and the examples from Trefle.io. " Group 1, 2021.

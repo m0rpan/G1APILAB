@@ -1,5 +1,5 @@
-## Ino's attempt
-This was for a group assigment, of which we were doing some implementation. Our project a device that measures sunlight, humidity and temperature. And once the device has read this data it would recommened a plant based on this data. To contibute to my group, i tried to use a trefel api to determine the zones distrubition of the plant as i thought this would be usefull for insight(our device also has a information section about the plant). Sadly, I did not get mine to work properl.
+## Zone distribution attempt
+This was for a group assigment, of which we were doing some implementation. Our project a device that measures sunlight, humidity and temperature. And once the device has read this data it would recommened a plant based on this data. To contibute to my group, i tried to use a trefel api to determine the zones distrubition of the plant as i thought this would be usefull for insight(our device also has a information section about the plant). Sadly, I did not get mine to work properly.
 
 ## Why the project is useful 
 This was a learning experince on what work goes in to being a designer and a hardcore lesson on programming.
