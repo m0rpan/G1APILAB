@@ -1,12 +1,3 @@
-//create a input box where the user can put in a number between 0-10
-//0=xherophile, 10=subaquatic
-//depending on what number the user puts in, give a list of plants that can survive in that humidity
-
-//Create input box. 
-
-//create else if statement, from 0-10. last else statement gives an alert that says "this is not valid"
-//each number-statement shows a list of plants that can live in that humidity. 
-
 var numberInput;
 
 //function that shows the list of data if the number that is put inside the input box is between 0 and 10
