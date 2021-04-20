@@ -12,12 +12,7 @@ app.get('/api/plantheight', (request,response)=>{
     .then(data => response.json(data));
   });
 
-  //example 2: trying to getAntartica plants
-app.get('/api/Antartica plants', (request,response)=>{
-    fetch('https://trefle.io/api/v1/distributions/antarctica/plants?token=Xz3zPU0yxTlTQgPCL65vqZQP98wTLL2ETe70d2MsmUE')
-    .then(res => res.json())
-    .then(data => response.json(data));
-  });
+
 
     //prototype
 app.get('/api/zone distribution', (request,response)=>{
