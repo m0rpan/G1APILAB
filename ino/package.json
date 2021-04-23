@@ -1,0 +1,20 @@
+{
+  "name": "ino",
+  "version": "1.0.0",
+  "description": "Prototype API assignment ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "API",
+    "Prototype",
+    "House",
+    "plant"
+  ],
+  "author": "Inotila Nghaamwa",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
