@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Document</title>
+</head>
+    <body>
+        <a href="/index.html"><button type="button" >Go to next!</button></a>
+        <a href="/index2.html"><button type="button" >Go to Exprttre!</button></a>
+        <a href="/prototype.html"><button type="button" >Go to Prrtwtype!</button></a>
+        <h1>This is all the plants on the API</h1>
+        <input type="text" id="EnterPlantNameID"/> <input type="button" id="buttonID">enter<input/>
+        <span id = "all"></span> 
+        
+     <script>;
+getAllData();
+
+async function getAllData(){
+        const response = await fetch(`/prototype`)
+        let dataToShow = await response.json();
+        console.log(dataToShow.data);
+
+        document.getElementById("all").textContent = dataToShow;
+
+    var justButton = document.getElementById("buttonID");
+    justButton.onclick = async function(){
+        var plantSearch = document.getElementById("EnterPlantNameID").value;
+        const response = await fetch(`search?searchText=${plantSearch}`);
+        const data = await response.json();
+        dataToShow = data.data;
+        let listContainer = document.getElementById('listContainer');
+        listContainer.innerHTML = "";
+        console.log(dataToShow);
+        
+        for (i = 0; i < fLen; i++) {
+            var li = document.createElement("li");
+            li.appendChild(document.createTextNode(dataToShow[i]['common_name']));
+            listContainer.appendChild(li);
+        
+}
+        
+    };
+
+
+var fruits, text, fLen, i;
+myPlantData = dataToShow.data;
+fLen = myPlantData.length;
+text = "<ul id='listContainer'>";
+for (i = 0; i < fLen; i++) {
+  text += "<li>" + myPlantData[i]["name"] + "</li>";
+}
+text += "</ul>";
+
+document.getElementById("all").innerHTML = text;
+
+};
+
+
+    </script>
+    </body>
+</html>
