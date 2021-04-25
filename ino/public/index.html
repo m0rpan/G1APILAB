@@ -7,10 +7,31 @@
     <title>Document</title>
 </head>
     <body>
-        <a href="/index.html"><button type="button" >Go to next!</button></a>
-        <a href="/index2.html"><button type="button" >Go to Exprttre!</button></a>
-        <a href="/prototype.html"><button type="button" >Go to Prrtwtype!</button></a>
-        <h1>This is all the plants on the API</h1>
+        <img src="" id="funnyguy" width="480"/><br>
+        <script>
+            console.log("Logo");
+    
+            catchFunnyguy()
+            .then(response => {
+                console.log('Here is the logo');
+            })
+            .catch(error => {
+                console.log('error');
+                console.error(error);
+            });
+    
+            async function catchFunnyguy() {
+                const response = await fetch('logo.png');
+                const blob = await response.blob();
+                document.getElementById('funnyguy').src = URL.createObjectURL(blob);
+    
+            }
+        </script>
+
+        <a href="/index.html"><button type="button" >Plant Names</button></a>
+        <a href="/index2.html"><button type="button" >Genus</button></a>
+        <a href="/prototype.html"><button type="button" >Plant location</button></a>
+        <h1>This a list of the common name of plants</h1>
         <span id = "all"></span>
         
      <script>
@@ -27,7 +48,7 @@ async function getAllData(){
 
 
 
-var fruits, text, fLen, i;
+var text, fLen, i;
 myPlantData = data.data;
 fLen = myPlantData.length;
 text = "<ul>";

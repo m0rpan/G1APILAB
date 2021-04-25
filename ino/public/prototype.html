@@ -7,11 +7,34 @@
     <title>Document</title>
 </head>
     <body>
-        <a href="/index.html"><button type="button" >Go to next!</button></a>
-        <a href="/index2.html"><button type="button" >Go to Exprttre!</button></a>
-        <a href="/prototype.html"><button type="button" >Go to Prrtwtype!</button></a>
-        <h1>This is all the plants on the API</h1>
-        <input type="text" id="EnterPlantNameID"/> <input type="button" id="buttonID">enter<input/>
+
+        <img src="" id="spotOnLogo" width="250"/><br>
+        <script>
+            console.log("Logo");
+    
+            spotOnLogo()
+            .then(response => {
+                console.log('Here is the logo');
+            })
+            .catch(error => {
+                console.log('error');
+                console.error(error);
+            });
+    
+            async function spotOnLogo() {
+                const response = await fetch('logo.png');
+                const blob = await response.blob();
+                document.getElementById('spotOnLogo').src = URL.createObjectURL(blob);
+    
+            }
+            
+        </script>
+
+        <a href="/index.html"><button type="button" >Plant Names</button></a>
+        <a href="/index2.html"><button type="button" >Genus</button></a>
+        <a href="/prototype.html"><button type="button" >Plant location</button></a>
+        <h1>Find the available plants of a country</h1>
+        <input type="text" id="EnterPlantNameID"/> <button type="button" id="buttonID">enter</button>
         <span id = "all"></span> 
         
      <script>;
