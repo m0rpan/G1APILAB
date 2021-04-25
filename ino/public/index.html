@@ -7,16 +7,22 @@
     <title>Document</title>
 </head>
     <body>
-        <h1>Spot.On plantfinder</h1>
-        
-        <p>
-            Hello
-        </p>
+        <h1>This is all the plants on the API</h1>
+        <span id = "all"></span>
+     <script>
+const api_url = `api/`;
+getAllData();
 
-        <label for = "mood">enter plant name</label>
+async function getAllData(){
+        const response = await fetch(api_url)
+        const data = await response.json();
+        console.log(data);
 
-        <input id="mood" value="" />
-        <button id="submit">submit</button>
-        <script src="../index.js"></script>
+        document.getElementById("all").textContent = data;
+        console.log(data);
+};
+
+
+    </script>
     </body>
 </html>
