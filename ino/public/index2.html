@@ -8,11 +8,11 @@
 </head>
     <body>
 
-        <img src="" id="funnyguy" width="480"/><br>
+        <img src="" id="spotOnLogo" width="250"/><br>
         <script>
             console.log("Logo");
     
-            catchFunnyguy()
+            spotOnLogo()
             .then(response => {
                 console.log('Here is the logo');
             })
@@ -21,12 +21,13 @@
                 console.error(error);
             });
     
-            async function catchFunnyguy() {
+            async function spotOnLogo() {
                 const response = await fetch('logo.png');
                 const blob = await response.blob();
-                document.getElementById('funnyguy').src = URL.createObjectURL(blob);
+                document.getElementById('spotOnLogo').src = URL.createObjectURL(blob);
     
             }
+            
         </script>
 
         <a href="/index.html"><button type="button" >Plant Names</button></a>
