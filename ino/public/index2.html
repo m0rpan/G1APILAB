@@ -7,9 +7,18 @@
     <title>Document</title>
 </head>
     <body>
-
+        <! -- centered the image so it front end looks good --> 
+        <style>
+            img {
+              display: block;
+              margin-left: auto;
+              margin-right: auto;
+            }
+        </style>
         <img src="" id="spotOnLogo" width="250"/><br>
+
         <script>
+            //fetched the logo from the local folder
             console.log("Logo");
     
             spotOnLogo()
@@ -29,7 +38,7 @@
             }
             
         </script>
-
+        <! -- these buttons are to navigate from the the different examples in, the last button "plant location" is the prototype --> 
         <a href="/index.html"><button type="button" >Plant Names</button></a>
         <a href="/index2.html"><button type="button" >Genus</button></a>
         <a href="/prototype.html"><button type="button" >Plant location</button></a>
@@ -48,7 +57,7 @@ async function getAllData(){
         console.log(dataToShow.data);
 
         document.getElementById("all").textContent = dataToShow;
-
+// the button is taking the value of the input and fetching that data
     var justButton = document.getElementById("buttonID");
     justButton.onclick = async function(){
         var plantSearch = document.getElementById("EnterPlantNameID").value;
