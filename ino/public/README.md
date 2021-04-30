@@ -1,9 +1,9 @@
-# Prototype
-## Plant distribution
- 
-I used the the data from  _trefle.io_ . In this prototype I am retrieving the distribution of the plants that they have in their data base. users can find out the distrubion of plants by country, they can do this by entering details in the input box. This information is useful for users should they want to know what type of environment their plant thrives in so that they can mimic this environment.
-To build this program I used the example from the entire module of the The Coding Trains playlist "Working with Data and APIs in JavaScript" on youtube as well as insights passed on by my groupmates.
- 
+# This project
+
+this project is for users who want to get plants that thrive in their homes environment.
+Its is a combination of work from Alva, Lisa, Morris, and Inotila's Spot.On group assignment. We have all made different projects that would serve as different sections of the devices functionality as seen during our presentation at the end of the course. I focused on the infromation part of the project.
+
+
 ## Installation
 For this API you need to install the dependencies required to run the site. 
 This is how you do it in VS CODE or any other similar program:
